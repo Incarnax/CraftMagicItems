@@ -44,7 +44,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(LocalizedString), "IsSet")]
+        [HarmonyLib.HarmonyPatch(typeof(LocalizedString), nameof(LocalizedString.IsSet))]
         // ReSharper disable once UnusedMember.Local
         private static class LocalizedStringIsSetPatch {
             // ReSharper disable once UnusedMember.Local
@@ -58,7 +58,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(LocalizedString), "IsEmpty")]
+        [HarmonyLib.HarmonyPatch(typeof(LocalizedString), nameof(LocalizedString.IsEmpty))]
         // ReSharper disable once UnusedMember.Local
         private static class LocalizedStringIsEmptyPatch {
             // ReSharper disable once UnusedMember.Local

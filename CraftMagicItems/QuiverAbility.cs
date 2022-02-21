@@ -51,7 +51,7 @@ namespace CraftMagicItems {
                 }
 #endif
 
-                var buffGuid = $"{guid}#CraftMagicItems({material.ToString()}QuiverBuff)";
+                var buffGuid = $"{guid}#CraftMagicItems({material}QuiverBuff)";
 
                 Main.Accessors.SetBlueprintScriptableObjectAssetGuid(quiverBuff) = buffGuid;
                 ResourcesLibrary.LibraryObject.BlueprintsByAssetId?.Add(buffGuid, quiverBuff);
@@ -73,7 +73,7 @@ namespace CraftMagicItems {
                 }
 #endif
 
-                var abilityGuid = $"{guid}#CraftMagicItems({material.ToString()}QuiverAbility)";
+                var abilityGuid = $"{guid}#CraftMagicItems({material}QuiverAbility)";
 
                 Main.Accessors.SetBlueprintScriptableObjectAssetGuid(quiverAbility) = abilityGuid;
                 ResourcesLibrary.LibraryObject.BlueprintsByAssetId?.Add(abilityGuid, quiverAbility);
@@ -104,7 +104,7 @@ namespace CraftMagicItems {
         }
 #endif
 
-        [HarmonyLib.HarmonyPatch(typeof(ItemSlot), "InsertItem")]
+        [HarmonyLib.HarmonyPatch(typeof(ItemSlot), nameof(ItemSlot.InsertItem))]
         // ReSharper disable once UnusedMember.Local
         private static class ItemSlotInsertItemPatch {
             static readonly MethodInfo methodToReplace = HarmonyLib.AccessTools.Property(typeof(ItemEntity), "IsStackable").GetGetMethod();

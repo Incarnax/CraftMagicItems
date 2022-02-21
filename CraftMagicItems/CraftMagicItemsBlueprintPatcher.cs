@@ -581,7 +581,7 @@ namespace CraftMagicItems {
                 visual = match.Groups["visual"].Value;
                 // Copy icon from a different item
                 var copyFromBlueprint = visual == "null" ? null : ResourcesLibrary.TryGetBlueprint<BlueprintItem>(visual);
-                var iconSprite = copyFromBlueprint == null ? null : copyFromBlueprint.Icon;
+                var iconSprite = copyFromBlueprint?.Icon;
                 accessors.SetBlueprintItemIcon(blueprint) = iconSprite;
                 if (equipmentHand != null && copyFromBlueprint is BlueprintItemEquipmentHand srcEquipmentHand) {
                     accessors.SetBlueprintItemEquipmentHandVisualParameters(equipmentHand) = srcEquipmentHand.VisualParameters;
@@ -593,8 +593,7 @@ namespace CraftMagicItems {
             string animation = null;
             if (match.Groups["animation"].Success) {
                 animation = match.Groups["animation"].Value;
-                WeaponAnimationStyle weaponAnimation;
-                if (Enum.TryParse(animation, out weaponAnimation)) {
+                if (Enum.TryParse(animation, out WeaponAnimationStyle weaponAnimation)) {
                     if (equipmentHand != null) {
                         accessors.SetBlueprintItemEquipmentWeaponAnimationStyle(equipmentHand.VisualParameters) = weaponAnimation;
                     }

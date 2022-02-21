@@ -81,7 +81,7 @@ namespace CraftMagicItems {
             return unit?.Descriptor.GetFact(BlueprintSustenanceFact) != null;
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(RestController), "CalculateNeededRations")]
+        [HarmonyLib.HarmonyPatch(typeof(RestController), nameof(RestController.CalculateNeededRations))]
         // ReSharper disable once UnusedMember.Local
         private static class RestControllerCalculateNeededRationsPatch {
             // ReSharper disable once UnusedMember.Local
@@ -117,7 +117,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(MemberUIBody), "CheckHasRole")]
+        [HarmonyLib.HarmonyPatch(typeof(MemberUIBody), nameof(MemberUIBody.CheckHasRole))]
         private static class MemberUiBodyCheckHasRolePatch {
             // ReSharper disable once UnusedMember.Local
             private static bool Prefix(MemberUIBody __instance, ref bool __result) {
@@ -138,7 +138,7 @@ namespace CraftMagicItems {
             return current.Contains(unit) && (best == null || current.Count > best.Count) ? current : best;
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(CampingState), "CleanupRoles")]
+        [HarmonyLib.HarmonyPatch(typeof(CampingState), nameof(CampingState.CleanupRoles))]
         // ReSharper disable once UnusedMember.Local
         private static class CampingStateCleanupRolesPatch {
             // ReSharper disable once UnusedMember.Local
@@ -171,7 +171,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(CampingState), "GetRolesCount")]
+        [HarmonyLib.HarmonyPatch(typeof(CampingState), nameof(CampingState.GetRolesCount))]
         // ReSharper disable once UnusedMember.Local
         private static class RestControllerIsTiredPatch {
             // ReSharper disable once UnusedMember.Local

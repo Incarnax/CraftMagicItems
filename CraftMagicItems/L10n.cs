@@ -69,7 +69,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(LocalizationManager), "CurrentLocale", HarmonyLib.MethodType.Setter)]
+        [HarmonyLib.HarmonyPatch(typeof(LocalizationManager), nameof(LocalizationManager.CurrentLocale), HarmonyLib.MethodType.Setter)]
         private static class LocalizationManagerCurrentLocaleSetterPatch {
             // ReSharper disable once UnusedMember.Local
             private static void Postfix() {
