@@ -1,0 +1,46 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="EnvDTE"#>
+<#@ assembly name="EnvDTE80" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ output extension=".json" #>
+<#
+	this.VS = new AutomationHelper(this.Host);
+#>
+{
+  "Id": "<#= VS.CurrentProject.Properties.Item("DefaultNamespace").Value #>",
+  "DisplayName": "<#= VS.CurrentProject.Properties.Item("Product").Value #>",
+  "Author": "<#= VS.CurrentProject.Properties.Item("Authors").Value #>",
+  "Version": "<#= VS.CurrentProject.Properties.Item("Version").Value #>",
+  "ManagerVersion": "<#= VS.CurrentProject.Properties.Item("FileVersion").Value #>",
+  "GameVersion": "<#= VS.CurrentProject.Properties.Item("AssemblyVersion").Value #>",
+<#/*
+  "Requirements": ["SomeMod-1.0.0", "AnotherMod"],
+  "LoadAfter": ["SomeMod", "AnotherMod"],
+*/#>
+  "AssemblyName": "<#= VS.CurrentProject.Properties.Item("OutputFileName").Value #>",
+  "EntryMethod": "<#= VS.CurrentProject.Properties.Item("DefaultNamespace").Value #>.Main.Load",
+  "Homepage": "<#= VS.CurrentProject.Properties.Item("PackageProjectUrl").Value #>",
+  "Repository": "<#= VS.CurrentProject.Properties.Item("RepositoryUrl").Value #>"
+}
+<#+
+public AutomationHelper VS;
+public class AutomationHelper {
+	public AutomationHelper(object host) {
+		this.Host = (ITextTemplatingEngineHost) host;
+	}
+	private EnvDTE80.DTE2 _DTE = null;
+	public EnvDTE80.DTE2 DTE { get {
+		if (_DTE == null)
+        {
+            var hostServiceProvider = (IServiceProvider) this.Host;
+			_DTE = (EnvDTE80.DTE2) hostServiceProvider.GetCOMService(typeof(EnvDTE.DTE));
+        }
+		return _DTE;
+	} }
+	public ITextTemplatingEngineHost Host { get; private set; }
+	public EnvDTE.Project CurrentProject { get { return this.FindProjectItem(this.Host.TemplateFile).ContainingProject; } }
+	public EnvDTE.ProjectItem FindProjectItem(string fileName) { return this.DTE.Solution.FindProjectItem(fileName); }
+}
+#>

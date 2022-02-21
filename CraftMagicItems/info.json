@@ -1,0 +1,12 @@
+﻿{
+  "Id": "CraftMagicItems",
+  "DisplayName": "Craft Magic Items",
+  "Author": "RobRendell, bfennema, Incarnax",
+  "Version": "2.1.0",
+  "ManagerVersion": "0.22.9",
+  "GameVersion": "2.1.7",
+  "AssemblyName": "CraftMagicItems.dll",
+  "EntryMethod": "CraftMagicItems.Main.Load",
+  "Homepage": "https://www.nexusmods.com/pathfinderkingmaker/mods/54",
+  "Repository": "https://raw.githubusercontent.com/Incarnax/CraftMagicItems/master/Repository.json"
+}
