@@ -164,7 +164,7 @@
     "Name": "ShieldBashing",
     "NameId": "3178bb0c-f6ed-4e56-9877-e5edc03fbb5d",
     "Enchantments": [
-      ["c39f0128372d43c39224c7b3af58e0db"],
+      ["c39f0128372d43c39224c7b3af58e0db"]
     ],
     "CasterLevelStart": 3,
     "CasterLevelMultiplier": 3,
@@ -172,7 +172,7 @@
     "CostType": "EnhancementLevelSquared",
     "CostFactor": 1,
     "OnlyForSlots": ["Shield"],
-    "Restrictions": ["ShieldArmor"],
+    "Restrictions": ["ShieldArmor"]
   },
   {
     "Name": "WeaponEnhancementBonus",

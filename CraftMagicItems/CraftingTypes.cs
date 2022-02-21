@@ -33,7 +33,7 @@ namespace CraftMagicItems {
 
     public class CraftingBlueprint<T> {
         [JsonIgnore]
-        private T m_blueprint;
+        private readonly T m_blueprint;
         public CraftingBlueprint(T blueprint) {
             m_blueprint = blueprint;
         }
@@ -48,14 +48,17 @@ namespace CraftMagicItems {
         [JsonProperty] public string FeatGuid;
         [JsonProperty] public int MinimumCasterLevel;
         [JsonProperty] public bool PrerequisitesMandatory;
-        [JsonProperty("NewItemBaseIDs", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItemEquipment>))]
-        private CraftingBlueprint<BlueprintItemEquipment>[][] m_NewItemBaseIDs;
+        [JsonProperty("NewItemBaseIDs", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItem>))]
+#pragma warning disable CS0649 //Field is never assigned
+        private CraftingBlueprint<BlueprintItem>[][] m_NewItemBaseIDs;
+#pragma warning restore CS0649
         [JsonProperty] public int Count;
-        [JsonIgnore] private BlueprintItemEquipment[] m_CachedNewItemBaseIDs;
-        [JsonIgnore] public BlueprintItemEquipment[] NewItemBaseIDs {
+        [JsonIgnore] private BlueprintItem[] m_CachedNewItemBaseIDs;
+        [JsonIgnore] private BlueprintItemEquipment[] m_CachedNewItemEquipmentBaseIDs;
+        [JsonIgnore] public BlueprintItem[] NewItemBaseIDs {
             get {
                 if (m_CachedNewItemBaseIDs == null && m_NewItemBaseIDs != null) {
-                    List<BlueprintItemEquipment> list = new List<BlueprintItemEquipment>();
+                    List<BlueprintItem> list = new List<BlueprintItem>();
                     foreach (var row in m_NewItemBaseIDs) {
                         var tmp = row.FirstOrDefault(blueprint => blueprint.Blueprint != null);
                         if (tmp != null) {
@@ -65,6 +68,14 @@ namespace CraftMagicItems {
                     m_CachedNewItemBaseIDs = list.ToArray();
                 }
                 return m_CachedNewItemBaseIDs;
+            }
+        }
+        [JsonIgnore] public BlueprintItemEquipment[] NewItemEquipmentBaseIDs {
+            get {
+                if (m_CachedNewItemEquipmentBaseIDs == null && m_NewItemBaseIDs != null) {
+                    m_CachedNewItemEquipmentBaseIDs = NewItemBaseIDs.OfType<BlueprintItemEquipment>().ToArray();
+                }
+                return m_CachedNewItemEquipmentBaseIDs;
             }
         }
     }
@@ -156,10 +167,12 @@ namespace CraftMagicItems {
         [JsonProperty] public string ParentNameId;
         [JsonProperty] public string BonusTypeId;
         [JsonProperty] public string BonusToId;
+#pragma warning disable CS0649 //Field is never assigned
         [JsonProperty("Enchantments", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItemEnchantment>))]
         private CraftingBlueprint<BlueprintItemEnchantment>[][] m_Enchantments;
         [JsonProperty("ResultItem", ItemConverterType = typeof(CraftingBlueprintConverter<BlueprintItem>))]
         private CraftingBlueprint<BlueprintItem>[] m_ResultItem;
+#pragma warning restore CS0649
         [JsonProperty] public bool EnchantmentsCumulative;
         [JsonProperty] public int CasterLevelStart;
         [JsonProperty] public int CasterLevelMultiplier;

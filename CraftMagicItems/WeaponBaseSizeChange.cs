@@ -12,7 +12,7 @@ namespace CraftMagicItems {
     public class WeaponBaseSizeChange : GameLogicComponent {
         public int SizeCategoryChange;
 
-        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), "BaseDamage", HarmonyLib.MethodType.Getter)]
+        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), nameof(BlueprintItemWeapon.BaseDamage), HarmonyLib.MethodType.Getter)]
         private static class BlueprintItemWeaponBaseDamage {
             private static void Postfix(BlueprintItemWeapon __instance, ref DiceFormula __result) {
                 foreach (var enchantment in __instance.Enchantments) {
@@ -25,7 +25,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), "AttackBonusStat", HarmonyLib.MethodType.Getter)]
+        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), nameof(BlueprintItemWeapon.AttackBonusStat), HarmonyLib.MethodType.Getter)]
         private static class BlueprintItemWeaponAttackBonusStat {
             private static void Postfix(BlueprintItemWeapon __instance, ref StatType __result) {
                 foreach (var enchantment in __instance.Enchantments) {
@@ -40,7 +40,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), "IsTwoHanded", HarmonyLib.MethodType.Getter)]
+        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), nameof(BlueprintItemWeapon.IsTwoHanded), HarmonyLib.MethodType.Getter)]
         private static class BlueprintItemWeaponIsTwoHanded {
             private static void Postfix(BlueprintItemWeapon __instance, ref bool __result) {
                 foreach (var enchantment in __instance.Enchantments) {
@@ -57,7 +57,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), "IsLight", HarmonyLib.MethodType.Getter)]
+        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), nameof(BlueprintItemWeapon.IsLight), HarmonyLib.MethodType.Getter)]
         private static class BlueprintItemWeaponIsLight {
             private static void Postfix(BlueprintItemWeapon __instance, ref bool __result) {
                 foreach (var enchantment in __instance.Enchantments) {
@@ -74,7 +74,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), "IsOneHandedWhichCanBeUsedWithTwoHands", HarmonyLib.MethodType.Getter)]
+        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), nameof(BlueprintItemWeapon.IsOneHandedWhichCanBeUsedWithTwoHands), HarmonyLib.MethodType.Getter)]
         private static class BlueprintItemWeaponIsOneHandedWhichCanBeUsedWithTwoHands {
             private static void Postfix(BlueprintItemWeapon __instance, ref bool __result) {
                 if (__instance.Type.AttackType == AttackType.Melee && !__instance.Type.IsNatural && !__instance.Type.IsUnarmed) {
@@ -95,7 +95,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), "SubtypeName", HarmonyLib.MethodType.Getter)]
+        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), nameof(BlueprintItemWeapon.SubtypeName), HarmonyLib.MethodType.Getter)]
         private static class BlueprintItemWeaponSubtypeName {
             private static void Postfix(BlueprintItemWeapon __instance, ref string __result) {
                 foreach (var enchantment in __instance.Enchantments) {

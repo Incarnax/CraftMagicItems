@@ -112,5 +112,11 @@ namespace CraftMagicItems.UI.Sections
         {
             return UmmUiRenderer.RenderCheckbox("Ignore the crafting feat Caster Level prerequisites when learning feats.", currentSetting);
         }
+
+        public bool Evaluate_DontAddClassFeats(bool currentSetting)
+        {
+            return UmmUiRenderer.RenderCheckbox("Do not inject basic Crafting feats into classes/archetypes.", currentSetting);
+        }
+
     }
 }

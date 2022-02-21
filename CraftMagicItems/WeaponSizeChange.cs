@@ -9,7 +9,7 @@ namespace CraftMagicItems {
     public class WeaponSizeChange : GameLogicComponent {
         public int SizeCategoryChange;
 
-        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), "BaseDamage", HarmonyLib.MethodType.Getter)]
+        [HarmonyLib.HarmonyPatch(typeof(BlueprintItemWeapon), nameof(BlueprintItemWeapon.BaseDamage), HarmonyLib.MethodType.Getter)]
         // ReSharper disable once UnusedMember.Local
         private static class BlueprintItemWeaponBaseDamage {
             private static void Postfix(BlueprintItemWeapon __instance, ref DiceFormula __result) {
@@ -23,7 +23,7 @@ namespace CraftMagicItems {
             }
         }
 
-        [HarmonyLib.HarmonyPatch(typeof(RuleCalculateWeaponStats), "WeaponSize", HarmonyLib.MethodType.Getter)]
+        [HarmonyLib.HarmonyPatch(typeof(RuleCalculateWeaponStats), nameof(RuleCalculateWeaponStats.WeaponSize), HarmonyLib.MethodType.Getter)]
         // ReSharper disable once UnusedMember.Local
         private static class RuleCalculateWeaponStatsWeaponSizePatch {
             private static void Prefix(RuleCalculateWeaponStats __instance, ref int ___m_SizeShift, ref int __state, ref Size __result) {
