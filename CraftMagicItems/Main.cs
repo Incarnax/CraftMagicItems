@@ -175,9 +175,9 @@ namespace CraftMagicItems {
                 return m_postfix != null && m_postfix.method == method;
             }
 
-			readonly MethodBase m_original;
-			readonly HarmonyLib.HarmonyMethod m_prefix;
-			readonly HarmonyLib.HarmonyMethod m_postfix;
+            readonly MethodBase m_original;
+            readonly HarmonyLib.HarmonyMethod m_prefix;
+            readonly HarmonyLib.HarmonyMethod m_postfix;
         }
 
         private static readonly MethodPatch[] MethodPatchList =
@@ -3212,11 +3212,11 @@ namespace CraftMagicItems {
                     var armorEnhancementBonus = GameHelper.GetItemEnhancementBonus(evt.Initiator.Body.SecondaryHand.Shield.ArmorComponent);
                     var weaponEnhancementBonus = GameHelper.GetItemEnhancementBonus(evt.Initiator.Body.SecondaryHand.Shield.WeaponComponent);
                     var itemEnhancementBonus = armorEnhancementBonus - weaponEnhancementBonus;
-					if (evt.DamageBundle.WeaponDamage is PhysicalDamage physicalDamage && itemEnhancementBonus > 0) {
-						physicalDamage.Enchantment += itemEnhancementBonus;
-						physicalDamage.EnchantmentTotal += itemEnhancementBonus;
-					}
-				}
+                    if (evt.DamageBundle.WeaponDamage is PhysicalDamage physicalDamage && itemEnhancementBonus > 0) {
+                        physicalDamage.Enchantment += itemEnhancementBonus;
+                        physicalDamage.EnchantmentTotal += itemEnhancementBonus;
+                    }
+                }
                 public void OnEventDidTrigger(RuleCalculateWeaponStats evt) { }
 
                 public void OnEventAboutToTrigger(RuleCalculateWeaponStats evt) {
@@ -4093,10 +4093,10 @@ namespace CraftMagicItems {
                 if (!item.IsIdentified) {
                     return;
                 }
-				if (!(item is ItemEntityWeapon itemEntityWeapon)){
-					return;
-				}
-				WeaponCategory category = itemEntityWeapon.Blueprint.Category;
+                if (!(item is ItemEntityWeapon itemEntityWeapon)){
+                    return;
+                }
+                WeaponCategory category = itemEntityWeapon.Blueprint.Category;
                 if (category.HasSubCategory(WeaponSubCategory.Finessable) && IsOversized(itemEntityWeapon.Blueprint)) {
                     __result = __result.Replace(LocalizedTexts.Instance.WeaponSubCategories.GetText(WeaponSubCategory.Finessable), "");
                     __result = __result.Replace(",  ,", ",");
@@ -4557,9 +4557,9 @@ namespace CraftMagicItems {
             // ReSharper disable once UnusedMember.Local
             private static bool Prefix(AddInitiatorAttackRollTrigger __instance, RuleAttackRoll evt, ref bool __result) {
                 if (__instance is GameLogicComponent logic) {
-					ItemEntity itemEntity = (logic.Fact is ItemEnchantment itemEnchantment) ? itemEnchantment.Owner : null;
-					ItemEntityWeapon itemEntityWeapon = (evt.Reason.Rule is RuleAttackWithWeapon ruleAttackWithWeapon) ? ruleAttackWithWeapon.Weapon : null;
-					__result = (itemEntity == null || itemEntity == itemEntityWeapon || evt.Weapon.Blueprint.IsNatural || evt.Weapon.Blueprint.IsUnarmed) &&
+                    ItemEntity itemEntity = (logic.Fact is ItemEnchantment itemEnchantment) ? itemEnchantment.Owner : null;
+                    ItemEntityWeapon itemEntityWeapon = (evt.Reason.Rule is RuleAttackWithWeapon ruleAttackWithWeapon) ? ruleAttackWithWeapon.Weapon : null;
+                    __result = (itemEntity == null || itemEntity == itemEntityWeapon || evt.Weapon.Blueprint.IsNatural || evt.Weapon.Blueprint.IsUnarmed) &&
                         (!__instance.CheckWeapon || (itemEntityWeapon != null && __instance.WeaponCategory == itemEntityWeapon.Blueprint.Category)) &&
                         (!__instance.OnlyHit || evt.IsHit) && (!__instance.CriticalHit || (evt.IsCriticalConfirmed && !evt.FortificationNegatesCriticalHit)) &&
                         (!__instance.SneakAttack || (evt.IsSneakAttack && !evt.FortificationNegatesSneakAttack)) &&

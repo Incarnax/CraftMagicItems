@@ -48,11 +48,11 @@ namespace CraftMagicItems {
         [JsonProperty] public string FeatGuid;
         [JsonProperty] public int MinimumCasterLevel;
         [JsonProperty] public bool PrerequisitesMandatory;
-		[JsonProperty("NewItemBaseIDs", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItem>))]
+        [JsonProperty("NewItemBaseIDs", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItem>))]
 #pragma warning disable CS0649 //Field is never assigned
-		private CraftingBlueprint<BlueprintItem>[][] m_NewItemBaseIDs;
+        private CraftingBlueprint<BlueprintItem>[][] m_NewItemBaseIDs;
 #pragma warning restore CS0649
-		[JsonProperty] public int Count;
+        [JsonProperty] public int Count;
         [JsonIgnore] private BlueprintItem[] m_CachedNewItemBaseIDs;
         [JsonIgnore] private BlueprintItemEquipment[] m_CachedNewItemEquipmentBaseIDs;
         [JsonIgnore] public BlueprintItem[] NewItemBaseIDs {
@@ -168,12 +168,12 @@ namespace CraftMagicItems {
         [JsonProperty] public string BonusTypeId;
         [JsonProperty] public string BonusToId;
 #pragma warning disable CS0649 //Field is never assigned
-		[JsonProperty("Enchantments", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItemEnchantment>))]
-		private CraftingBlueprint<BlueprintItemEnchantment>[][] m_Enchantments;
-		[JsonProperty("ResultItem", ItemConverterType = typeof(CraftingBlueprintConverter<BlueprintItem>))]
-		private CraftingBlueprint<BlueprintItem>[] m_ResultItem;
+        [JsonProperty("Enchantments", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItemEnchantment>))]
+        private CraftingBlueprint<BlueprintItemEnchantment>[][] m_Enchantments;
+        [JsonProperty("ResultItem", ItemConverterType = typeof(CraftingBlueprintConverter<BlueprintItem>))]
+        private CraftingBlueprint<BlueprintItem>[] m_ResultItem;
 #pragma warning restore CS0649
-		[JsonProperty] public bool EnchantmentsCumulative;
+        [JsonProperty] public bool EnchantmentsCumulative;
         [JsonProperty] public int CasterLevelStart;
         [JsonProperty] public int CasterLevelMultiplier;
         [JsonProperty] public int BonusMultiplier;
@@ -181,7 +181,7 @@ namespace CraftMagicItems {
         [JsonProperty] public int MundaneDC;
         [JsonProperty] public PhysicalDamageMaterial Material;
         [JsonProperty] public BlueprintAbility[] PrerequisiteSpells;
-		[JsonProperty("PrerequisiteFeats", ItemConverterType = typeof(CraftingBlueprintConverter<BlueprintFeature>))]
+        [JsonProperty("PrerequisiteFeats", ItemConverterType = typeof(CraftingBlueprintConverter<BlueprintFeature>))]
         private CraftingBlueprint<BlueprintFeature>[] m_PrerequisiteFeats;
 
         [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
