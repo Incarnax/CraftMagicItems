@@ -19,6 +19,7 @@ namespace CraftMagicItems
         public bool CustomCraftRate;
         public int MagicCraftingRate = MagicCraftingProgressPerDay;
         public int MundaneCraftingRate = MundaneCraftingProgressPerDay;
+        public bool DontAddClassFeats;
 
         public override void Save(UnityModManager.ModEntry modEntry)
         {

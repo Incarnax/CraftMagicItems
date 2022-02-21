@@ -59,6 +59,7 @@ namespace CraftMagicItems.UI
             modSettings.CraftAtFullSpeedWhileAdventuring = renderer.Evaluate_CraftAtFullSpeedWhileAdventuring(modSettings.CraftAtFullSpeedWhileAdventuring);
             modSettings.IgnorePlusTenItemMaximum = renderer.Evaluate_IgnorePlusTenItemMaximum(modSettings.IgnorePlusTenItemMaximum);
             modSettings.IgnoreFeatCasterLevelRestriction = renderer.Evaluate_IgnoreFeatCasterLevelRestriction(modSettings.IgnoreFeatCasterLevelRestriction);
+            modSettings.DontAddClassFeats = renderer.Evaluate_DontAddClassFeats(modSettings.DontAddClassFeats);
         }
 
         /// <summary>Renders the section for feat reassignment and handles user selections</summary>

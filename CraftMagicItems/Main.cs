@@ -3113,6 +3113,11 @@ namespace CraftMagicItems {
                     AddCraftingFeats(idGenerator, characterClass.Progression);
                 }
 
+                if (ModSettings.DontAddClassFeats)
+                {
+                    return;
+                }
+
                 // Alchemists get Brew Potion as a bonus 1st level feat, except for Grenadier archetype alchemists.
                 var brewPotionData = ItemCraftingData.First(data => data.Name == "Potion");
                 var brewPotion = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>(brewPotionData.FeatGuid);

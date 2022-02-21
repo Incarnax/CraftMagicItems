@@ -66,6 +66,11 @@ namespace CraftMagicItems.UI.Sections
         /// <returns>The selection that the UI currently has registered</returns>
         int Evaluate_MundaneCraftingRateSlider(int currentSetting);
 
+        /// <summary>Renders a checkbox indicating whether basic crafting feats should not be injected into some class/archetype progressions.</summary>
+        /// <param name="currentSetting">Current value</param>
+        /// <returns>The value of the UI checkbox</returns>
+        bool Evaluate_DontAddClassFeats(bool currentSetting);
+
         /// <summary>Renders a warning that price disparity between custom items crafts to non-custom items will have a selling cost disparity between crafting and sale.</summary>
         void RenderOnly_WarningAboutCustomItemVanillaItemCostDisparity();
     }
