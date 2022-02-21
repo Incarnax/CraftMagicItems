@@ -48,14 +48,15 @@ namespace CraftMagicItems {
         [JsonProperty] public string FeatGuid;
         [JsonProperty] public int MinimumCasterLevel;
         [JsonProperty] public bool PrerequisitesMandatory;
-        [JsonProperty("NewItemBaseIDs", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItemEquipment>))]
-        private CraftingBlueprint<BlueprintItemEquipment>[][] m_NewItemBaseIDs;
+        [JsonProperty("NewItemBaseIDs", ItemConverterType = typeof(CraftingBlueprintArrayConverter<BlueprintItem>))]
+        private CraftingBlueprint<BlueprintItem>[][] m_NewItemBaseIDs;
         [JsonProperty] public int Count;
-        [JsonIgnore] private BlueprintItemEquipment[] m_CachedNewItemBaseIDs;
-        [JsonIgnore] public BlueprintItemEquipment[] NewItemBaseIDs {
+        [JsonIgnore] private BlueprintItem[] m_CachedNewItemBaseIDs;
+        [JsonIgnore] private BlueprintItemEquipment[] m_CachedNewItemEquipmentBaseIDs;
+        [JsonIgnore] public BlueprintItem[] NewItemBaseIDs {
             get {
                 if (m_CachedNewItemBaseIDs == null && m_NewItemBaseIDs != null) {
-                    List<BlueprintItemEquipment> list = new List<BlueprintItemEquipment>();
+                    List<BlueprintItem> list = new List<BlueprintItem>();
                     foreach (var row in m_NewItemBaseIDs) {
                         var tmp = row.FirstOrDefault(blueprint => blueprint.Blueprint != null);
                         if (tmp != null) {
@@ -65,6 +66,14 @@ namespace CraftMagicItems {
                     m_CachedNewItemBaseIDs = list.ToArray();
                 }
                 return m_CachedNewItemBaseIDs;
+            }
+        }
+        [JsonIgnore] public BlueprintItemEquipment[] NewItemEquipmentBaseIDs {
+            get {
+                if (m_CachedNewItemEquipmentBaseIDs == null && m_NewItemBaseIDs != null) {
+                    m_CachedNewItemEquipmentBaseIDs = NewItemBaseIDs.OfType<BlueprintItemEquipment>().ToArray();
+                }
+                return m_CachedNewItemEquipmentBaseIDs;
             }
         }
     }

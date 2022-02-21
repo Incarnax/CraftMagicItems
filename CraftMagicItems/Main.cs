@@ -1243,7 +1243,7 @@ namespace CraftMagicItems {
                     })
                     .OrderBy(item => item.Name)
                     .ToArray();
-                var canCreateNew = craftingData.NewItemBaseIDs != null;
+                var canCreateNew = craftingData.NewItemEquipmentBaseIDs != null;
                 var itemNames = items.Select(item => item.Name).PrependConditional(canCreateNew, new L10NString("craftMagicItems-label-craft-new-item"))
                     .ToArray();
                 if (itemNames.Length == 0) {
@@ -1309,7 +1309,7 @@ namespace CraftMagicItems {
                 .OrderBy(recipe => recipe.ParentNameId ?? recipe.NameId)
                 .ToArray();
             var recipeNames = availableRecipes.Select(recipe => recipe.ParentNameId ?? recipe.NameId)
-                .Concat(upgradeItem == null && (craftingData.NewItemBaseIDs == null || craftingData.NewItemBaseIDs.Length == 0) || upgradeItemDoubleWeapon != null || (upgradeItemShield != null && upgradeItemShieldArmor != upgradeItem)
+                .Concat(upgradeItem == null && (craftingData.NewItemEquipmentBaseIDs == null || craftingData.NewItemEquipmentBaseIDs.Length == 0) || upgradeItemDoubleWeapon != null || (upgradeItemShield != null && upgradeItemShieldArmor != upgradeItem)
                     ? new string[0]
                     : new[] {new L10NString("craftMagicItems-label-cast-spell-n-times").ToString()})
                 .ToArray();
@@ -2295,7 +2295,7 @@ namespace CraftMagicItems {
         }
 
         private static BlueprintItemEquipment RandomBaseBlueprintId(ItemCraftingData itemData, Func<BlueprintItemEquipment, bool> selector = null) {
-            var blueprintIds = selector == null ? itemData.NewItemBaseIDs : itemData.NewItemBaseIDs.Where(selector).ToArray();
+            var blueprintIds = selector == null ? itemData.NewItemEquipmentBaseIDs : itemData.NewItemEquipmentBaseIDs.Where(selector).ToArray();
             return blueprintIds[RandomGenerator.Next(blueprintIds.Length)];
         }
 
@@ -2449,7 +2449,7 @@ namespace CraftMagicItems {
             AbilityData spell, BlueprintAbility spellBlueprint, int spellLevel, int casterLevel)
         {
             var itemBlueprintList = FindItemBlueprintsForSpell(spellBlueprint, craftingData.UsableItemType);
-            if (itemBlueprintList == null && craftingData.NewItemBaseIDs == null)
+            if (itemBlueprintList == null && craftingData.NewItemEquipmentBaseIDs == null)
             {
                 var message = L10NFormat("craftMagicItems-label-no-item-exists", new L10NString(craftingData.NamePrefixId), spellBlueprint.Name);
                 UmmUiRenderer.RenderLabel(message);

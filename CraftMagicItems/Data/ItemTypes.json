@@ -323,5 +323,17 @@
     "MundaneBaseDC": 15,
     "RecipeFileNames": ["MundaneRecipes.json"],
     "Slots": ["Usable"]
+  },
+  {
+    "DataType": "RecipeBased",
+    "Name": "CraftMundaneAdventureItems",
+    "NameId": "craftMagicItems-itemType-adventure",
+    "NewItemBaseIDs": [
+      ["347f391695929a84eb4b99f327032fcf"],
+      ["0bd04e1febe11a942baf30c0a8851b36"]
+    ],
+    "MundaneBaseDC": 10,
+    "RecipeFileNames": ["MundaneRecipes.json"],
+    "Slots": ["NonUsable"]
   }
 ]
