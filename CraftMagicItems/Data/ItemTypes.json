@@ -13,7 +13,7 @@
       ["358ee9cb540a9af4e9bc76cc1af62e86"],
       ["e5700c45eb88bdd40a324e10d3de4a07"],
       ["33ea3e3e578d4db4c8e57632fca4c9ec"],
-      ["68d5aa212b7323e4e95e0fe731ea50cf"],
+      ["68d5aa212b7323e4e95e0fe731ea50cf"]
     ],
     "UsableItemType": "Scroll",
     "NamePrefixId": "02127d26-b682-49be-af74-4b5ab9a07ca3",
@@ -50,7 +50,7 @@
       ["021b4a12739c59541922e3857f3fb3a4"],
       ["394d337603392eb4c817994c45877fc0"],
       ["8cb627da1a91069428ce87d9a114cdd6"],
-      ["85a4ff725c5236b4f9e0adb17fb64e2b"],
+      ["85a4ff725c5236b4f9e0adb17fb64e2b"]
     ],
     "UsableItemType": "Wand",
     "NamePrefixId": "7e951a61-9a79-45bb-b8d8-3056b1d14595",
@@ -104,7 +104,7 @@
       ["fedfe06fec617c8429b2db25eb584cd6#CraftMagicItems(enchantments=(),visual=21d5890987c4887469acd001f7244e1e)"],
       ["fedfe06fec617c8429b2db25eb584cd6#CraftMagicItems(enchantments=(),visual=17e5973a5ef49ce42ac49117d693efaa)"],
       ["fedfe06fec617c8429b2db25eb584cd6#CraftMagicItems(enchantments=(),visual=5f5ae4248e3d2bb479007ac219a8e3c2)"],
-      ["fedfe06fec617c8429b2db25eb584cd6#CraftMagicItems(enchantments=(),visual=1575d992db377af4298d966cdeaca1be)"],
+      ["fedfe06fec617c8429b2db25eb584cd6#CraftMagicItems(enchantments=(),visual=1575d992db377af4298d966cdeaca1be)"]
     ],
     "RecipeFileNames": ["CommonRecipes.json", "WondrousRecipes.json"],
     "Slots": ["Armor", "Belt", "Feet", "Gloves", "Head", "Neck", "Shoulders", "Wrist", "Usable"],
@@ -134,7 +134,7 @@
       ["66ab84747fa8c5f43851b4bd02ed3f85"],
       ["072ddfdddd30f3c428e18cb70b566493"],
       ["70dadcb5b5184e746a7ee1b8e43b8b63"],
-      ["cd59e06babb67514da00e94b3269a639"],
+      ["cd59e06babb67514da00e94b3269a639"]
     ],
     "RecipeFileNames": ["CommonRecipes.json", "RingRecipes.json"],
     "Slots": ["Ring"]
@@ -165,7 +165,7 @@
       ["9f76e9a3353e914479c5ddb4b4a82fb4"],
       ["598540b85673d984a8d45effcadda93f"],
       ["d7963e1fcf260c148877afd3252dbc91"],
-      ["afbe88d27a0eb544583e00fa78ffb2c7"],
+      ["afbe88d27a0eb544583e00fa78ffb2c7"]
     ],
     "MundaneBaseDC": 10,
     "RecipeFileNames": ["MundaneRecipes.json"],
@@ -181,7 +181,7 @@
       ["f4cef3ba1a15b0f4fa7fd66b602ff32b"],
       ["6a1a429f023e5134fb16a4962cb79257"],
       ["0c87000706cb41789657938773e1b279", "a85d51d0fb905f940b951eec60388bac#CraftMagicItems(enchantments=(),visual=5f7e85634b80177428370151feb2116b,nameId=7aa87bff-84b7-4337-9ad2-c1f6268fae0e,secondEnd=b12650bdb547d7e499cdc29e913088cb#CraftMagicItems(enchantments=()))"],
-      ["3776ede5b48a48d7975adf32e6e09f7f", "f4cef3ba1a15b0f4fa7fd66b602ff32b#CraftMagicItems(enchantments=(),visual=05d8f2e20b09a3d43871d76424c195c6,nameId=3fa879e0-17e0-4d65-90b5-05c44e28a09c,secondEnd=7c8f6712c444cf446a4bd3b8b717cb5c#CraftMagicItems(enchantments=()))"],
+      ["3776ede5b48a48d7975adf32e6e09f7f", "f4cef3ba1a15b0f4fa7fd66b602ff32b#CraftMagicItems(enchantments=(),visual=05d8f2e20b09a3d43871d76424c195c6,nameId=3fa879e0-17e0-4d65-90b5-05c44e28a09c,secondEnd=7c8f6712c444cf446a4bd3b8b717cb5c#CraftMagicItems(enchantments=()))"]
     ],
     "MundaneBaseDC": 10,
     "MundaneEnhancementsStackable": true,
@@ -247,7 +247,7 @@
       ["201f6150321e09048bd59e9b7f558cb0"],
       ["6d40d84e239bdf345b349ff52e3c00a9"],
       ["b9ed902d07b622b4f8ec223808f754c1"],
-      ["3125ac6c819db9f4697312710699b637"],
+      ["3125ac6c819db9f4697312710699b637"]
     ],
     "MundaneBaseDC": 15,
     "MundaneEnhancementsStackable": true,
@@ -283,7 +283,7 @@
       ["310257322f1f424429243b4d78e79a43"],
       ["e21f428f9fc640f3b2a44ea8c0c2bd6b"],
       ["ab88f557dcf30bb4cb0b758c72cec08e"],
-      ["dda1a4f8cbf8ad34ca7845ca17313e86"],
+      ["dda1a4f8cbf8ad34ca7845ca17313e86"]
     ],
     "MundaneBaseDC": 18,
     "MundaneEnhancementsStackable": true,
@@ -294,9 +294,9 @@
     "DataType": "RecipeBased",
     "Name": "CraftMundaneExtraWeapons",
     "NewItemBaseIDs": [
-      ["85c8efabf99ccc143b0fc2d73e795634"],
+      ["85c8efabf99ccc143b0fc2d73e795634"]
     ],
-    "RecipeFileNames": ["MundaneRecipes.json"],
+    "RecipeFileNames": ["MundaneRecipes.json"]
   },
   {
     "DataType": "RecipeBased",
@@ -305,7 +305,7 @@
     "NewItemBaseIDs": [
       ["25f9b5ef564cbef49a1e54c48e67dfc1#CraftMagicItems(enchantments=(),activatableAbility=5a769135b9b00684ea010d36ae49848e#CraftMagicItems(ColdIronQuiverAbility),charges=1,weight=15,visual=7a69e2421e92efc49b8d2ee592de2f72,priceAdjust=-13996,nameId=craftMagicItems-mundane-coldiron-quiver-name,descriptionId=craftMagicItems-mundane-coldiron-quiver-description)"],
       ["25f9b5ef564cbef49a1e54c48e67dfc1#CraftMagicItems(enchantments=(),activatableAbility=5a769135b9b00684ea010d36ae49848e#CraftMagicItems(SilverQuiverAbility),charges=1,weight=15,visual=059441667d95ad140924a36452799a3c,priceAdjust=-13992,nameId=craftMagicItems-mundane-silver-quiver-name,descriptionId=craftMagicItems-mundane-silver-quiver-description)"],
-      ["25f9b5ef564cbef49a1e54c48e67dfc1#CraftMagicItems(enchantments=(),activatableAbility=5a769135b9b00684ea010d36ae49848e#CraftMagicItems(AdamantiteQuiverAbility),charges=1,weight=15,visual=911d0f8cad672454a94286a9feafc360,priceAdjust=-13940,nameId=craftMagicItems-mundane-adamantite-quiver-name,descriptionId=craftMagicItems-mundane-adamantite-quiver-description)"],
+      ["25f9b5ef564cbef49a1e54c48e67dfc1#CraftMagicItems(enchantments=(),activatableAbility=5a769135b9b00684ea010d36ae49848e#CraftMagicItems(AdamantiteQuiverAbility),charges=1,weight=15,visual=911d0f8cad672454a94286a9feafc360,priceAdjust=-13940,nameId=craftMagicItems-mundane-adamantite-quiver-name,descriptionId=craftMagicItems-mundane-adamantite-quiver-description)"]
     ],
     "Count": 20,
     "MundaneBaseDC": 20,
@@ -318,7 +318,7 @@
     "NameId": "43190791-b32a-4df1-b278-91cbbc25592a",
     "NewItemBaseIDs": [
       ["4639724c4a9cc9544a2f622b66931658"],
-      ["fd56596e273d1ff49a8c29cc9802ae6e"],
+      ["fd56596e273d1ff49a8c29cc9802ae6e"]
     ],
     "MundaneBaseDC": 15,
     "RecipeFileNames": ["MundaneRecipes.json"],

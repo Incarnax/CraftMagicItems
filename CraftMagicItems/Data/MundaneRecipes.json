@@ -92,7 +92,7 @@
       "78aef04821150bd479314bc974ea73e2:null",
       "a85d51d0fb905f940b951eec60388bac:2a298726445c2184bbeab9f34ece55eb",
       "f4cef3ba1a15b0f4fa7fd66b602ff32b:7ab0c34a329421045b61d2f15f91b6b1",
-      "6a1a429f023e5134fb16a4962cb79257:294e15227b2c1d245ab1ff99922f339f",
+      "6a1a429f023e5134fb16a4962cb79257:294e15227b2c1d245ab1ff99922f339f"
     ],
     "NameMappings": [
       "secondEnd=b12650bdb547d7e499cdc29e913088cb#CraftMagicItems.*6b38844e2bffbac48b63036b66e735be.*material=ColdIron:craftMagicItems-mundane-masterwork-cold-iron-spiked-light-mithral-shield-name",
@@ -108,7 +108,7 @@
       "secondEnd=b12650bdb547d7e499cdc29e913088cb#CraftMagicItems:craftMagicItems-mundane-spiked-light-mithral-shield-name",
       "^0c87000706cb41789657938773e1b279:craftMagicItems-mundane-spiked-light-mithral-shield-name",
       "secondEnd=7c8f6712c444cf446a4bd3b8b717cb5c#CraftMagicItems:craftMagicItems-mundane-spiked-heavy-mithral-shield-name",
-      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-spiked-heavy-mithral-shield-name",
+      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-spiked-heavy-mithral-shield-name"
 	]
   },
   {
@@ -136,7 +136,7 @@
       "^a85d51d0fb905f940b951eec60388bac#CraftMagicItems:craftMagicItems-mundane-masterwork-spiked-light-shield-name",
       "^0c87000706cb41789657938773e1b279:craftMagicItems-mundane-masterwork-spiked-light-shield-name",
       "^f4cef3ba1a15b0f4fa7fd66b602ff32b#CraftMagicItems:craftMagicItems-mundane-masterwork-spiked-heavy-shield-name",
-      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-masterwork-spiked-heavy-shield-name",
+      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-masterwork-spiked-heavy-shield-name"
     ]
   },
   {
@@ -162,7 +162,7 @@
       "^a85d51d0fb905f940b951eec60388bac#CraftMagicItems:craftMagicItems-mundane-cold-iron-spiked-light-shield-name",
       "^0c87000706cb41789657938773e1b279:craftMagicItems-mundane-cold-iron-spiked-light-shield-name",
       "^f4cef3ba1a15b0f4fa7fd66b602ff32b#CraftMagicItems:craftMagicItems-mundane-cold-iron-spiked-heavy-shield-name",
-      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-cold-iron-spiked-heavy-shield-name",
+      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-cold-iron-spiked-heavy-shield-name"
 	]
   },
   {
@@ -187,7 +187,7 @@
       "^a85d51d0fb905f940b951eec60388bac#CraftMagicItems:craftMagicItems-mundane-mithral-spiked-light-shield-name",
       "^0c87000706cb41789657938773e1b279:craftMagicItems-mundane-mithral-spiked-light-shield-name",
       "^f4cef3ba1a15b0f4fa7fd66b602ff32b#CraftMagicItems:craftMagicItems-mundane-mithral-spiked-heavy-shield-name",
-      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-mithral-spiked-heavy-shield-name",
+      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-mithral-spiked-heavy-shield-name"
 	]
   },
   {
@@ -212,7 +212,7 @@
       "^a85d51d0fb905f940b951eec60388bac#CraftMagicItems:craftMagicItems-mundane-adamantine-spiked-light-shield-name",
       "^0c87000706cb41789657938773e1b279:craftMagicItems-mundane-adamantine-spiked-light-shield-name",
       "^f4cef3ba1a15b0f4fa7fd66b602ff32b#CraftMagicItems:craftMagicItems-mundane-adamantine-spiked-heavy-shield-name",
-      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-adamantine-spiked-heavy-shield-name",
+      "^3776ede5b48a48d7975adf32e6e09f7f:craftMagicItems-mundane-adamantine-spiked-heavy-shield-name"
 	]
   },
   {
@@ -326,7 +326,7 @@
       "8bdfa4f81bbc7b540919d770095720be:7f7c8e1e4fdd99e438b30ed9622e9e3f",
       "6080738f7e97b5646980a0efad2da676:d40c42776160c3844858cb8638ecae13",
       "926d02c8af0352b46874791d4de9764f:4abc27631e2894f4b8b70270e31694f1",
-      "07863393521453a4da9e98626531eb5f:c926ffbdccc4d124c8e8dedfe2e6f499",
+      "07863393521453a4da9e98626531eb5f:c926ffbdccc4d124c8e8dedfe2e6f499"
     ],
     "AnimationMappings": [
       "b47455bac4f039747ad5e4ddc4e981a4:AxeTwoHanded",
@@ -337,7 +337,7 @@
       "e7d3a58b4eb3d7e419ab4cc40f283a32:AxeTwoHanded",
       "231f325de2b32dd4585707f8d0c87af3:PiercingTwoHanded",
       "766689ccb57d9eb4f8fc88e2e85a919f:SlashingTwoHanded",
-      "e21f428f9fc640f3b2a44ea8c0c2bd6b:SlashingTwoHanded",
+      "e21f428f9fc640f3b2a44ea8c0c2bd6b:SlashingTwoHanded"
 	]
   },
   {
@@ -367,7 +367,7 @@
       "e7d3a58b4eb3d7e419ab4cc40f283a32:f20e85bd5bb8dc74785afc129284bcda",
       "6fd0a849531617844b195f452661b2cd:f717b39c351b8b44388c471d4d272f4e",
       "6080738f7e97b5646980a0efad2da676:238ac092fad27144c9514f82917fbec9",
-      "766689ccb57d9eb4f8fc88e2e85a919f:355659b342d28e641bf29fe6d8084d19",
+      "766689ccb57d9eb4f8fc88e2e85a919f:355659b342d28e641bf29fe6d8084d19"
     ],
     "AnimationMappings": [
       "c91f331cdf7e331468490323a2e1613d:PiercingOneHanded",
@@ -375,7 +375,7 @@
       "f83415c0e7ea1994d8a7f3dec8f5a861:PiercingOneHanded",
       "5bfdaaa6416cc604cba121d003db11ef:PiercingOneHanded",
       "ada85dae8d12eda4bbe6747bb8b5883c:TorchOneHanded",
-      "f28f6031c2908d84d945865a80f67177:PiercingOneHanded",
+      "f28f6031c2908d84d945865a80f67177:PiercingOneHanded"
 	]
   }
 ]

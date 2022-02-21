@@ -718,7 +718,7 @@
     "Name": "Irongrip",
     "NameId": "2845c74a-a0aa-473b-87f0-7eedc71f6786",
     "Enchantments": [
-      ["db07984caaaf42c6bdeddf555e0d9b71"],
+      ["db07984caaaf42c6bdeddf555e0d9b71"]
     ],
     "CasterLevelStart": 3,
     "CasterLevelMultiplier": 3,
@@ -1065,5 +1065,5 @@
     "CostFactor": 137500,
     "MaterialComponentCost" : 125000,
     "OnlyForSlots": ["Usable"]
-  },
+  }
 ]
